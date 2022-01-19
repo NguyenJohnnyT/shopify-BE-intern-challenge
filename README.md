@@ -1,0 +1,1 @@
+data for inventory.json for seeding was taken from `geeksforgeeks.org` <a href='https://www.geeksforgeeks.org/inventory-management-with-json-in-python/'>link</a>
