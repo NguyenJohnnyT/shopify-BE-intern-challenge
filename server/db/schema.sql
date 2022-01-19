@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS shopify_db;
+
+CREATE DATABASE shopify_db;

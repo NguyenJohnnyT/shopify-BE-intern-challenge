@@ -1,0 +1,25 @@
+{
+  "name": "shopify-be-intern-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "client": "cd client && npm run start",
+    "server": "cd server && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenJohnnyT/shopify-BE-intern-challenge.git"
+  },
+  "author": "Johnny Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NguyenJohnnyT/shopify-BE-intern-challenge/issues"
+  },
+  "homepage": "https://github.com/NguyenJohnnyT/shopify-BE-intern-challenge#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
