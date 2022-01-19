@@ -57,8 +57,21 @@ const deleteItem = async (req, res) => {
   }
 }
 
-router.get('/', getAllItems)
-router.put('/:id', editItem)
+const createItem = async (req, res) => {
+  try {
+    const itemData = await Inventory.create(
+      req.body
+    )
+    res.status(200).json( { message: "Item Created!" })
+  } catch (err){
+    console.log(err);
+    res.status(500).json(err);
+  }
+}
+
+router.get(   '/',    getAllItems)
+router.post(  '/',    createItem)
+router.put(   '/:id', editItem)
 router.delete('/:id', deleteItem)
 
 module.exports = router
