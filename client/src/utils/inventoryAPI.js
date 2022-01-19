@@ -33,3 +33,19 @@ export const addItem = async (name, price, category, quantity) => {
     })
   })
 }
+
+export const editItem = async(id, name, price, category, quantity) => {
+  return fetch(`http://localhost:3001/api/inventory/${id}`, {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id,
+      name,
+      price,
+      category,
+      quantity
+    })
+  })
+}
