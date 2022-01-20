@@ -11,8 +11,8 @@ export default function InventoryEditForm({item}) {
   })
 
   useEffect(()=> {
-    return
-  }, [input])
+    setInput(item);
+  }, [item])
 
   function handleFormSubmit () {
     editItem(
