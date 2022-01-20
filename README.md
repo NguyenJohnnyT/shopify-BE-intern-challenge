@@ -25,8 +25,8 @@ This application uses MySQL CLI as a relational database service and will requir
 <ol>
  <li>Clone the repository down to your machine</li>
  <li>From the root folder, run <code>npm install</code> in the terminal to install application dependencies</li>
+ <li>There is a file called <code>.env.EXAMPLE</code> in the <code>server</code> folder. <b>Rename</b> the file to <code>.env</code>. Please enter your MySQL password utilized by the <code>root user</code> so the database can be created and updated correctly. </li>
  <li>Open the MySQL CLI and <code>source server/db/schema.sql</code> to create a local shopify database</li>
- 
  <li>From the <code>server</code> folder, enter <code>npm run seed</code> to seed <code>shopify_db</code> with sample data from <code>inventory.json</code></li>
  <li>From the root folder, run <code>npm run develop</code> to start the application</li>
 </ol>
