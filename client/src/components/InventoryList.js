@@ -44,8 +44,12 @@ const InventoryList = () => {
           )
         })}
       </div>
-      {edit.toggle ?
-      <InventoryEditForm item={edit.item} />
+      {edit.toggle ? (
+        <div>
+          <h2> Editing item...</h2>
+          <InventoryEditForm item={edit.item} />
+        </div>
+      )
       : null}
       <h2>Download as csv</h2>
       {list 
