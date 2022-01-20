@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { getItems, deleteItem } from './utils/inventoryAPI';
+import { getItems, deleteItem } from '../utils/inventoryAPI';
 import Item from './Item';
-import InventoryEditForm from './InventoryEditForm'
+import InventoryEditForm from './InventoryEditForm';
+import { CSVLink } from 'react-csv';
 
 const InventoryList = () => {
   const [list, setList ] = useState();
-  const [edit, setEdit ] = useState({ id: null, toggle: false });
+  const [edit, setEdit ] = useState({ item: {id: null}, toggle: false });
 
   useEffect(() => {
     const getList = async () => {
@@ -14,7 +15,6 @@ const InventoryList = () => {
     }
 
     return getList();
-    
   }, [])
 
   function handleDelete (id) {
@@ -23,6 +23,10 @@ const InventoryList = () => {
   }
 
   function handleEdit (item) {
+    if (edit.item.id === item.id && item.id !== null) {
+      setEdit({ item: {id: null}, toggle: false})
+      return
+    }
     const newEdit = {toggle: true, item: item};
     setEdit(newEdit);
   }
@@ -43,6 +47,11 @@ const InventoryList = () => {
       {edit.toggle ?
       <InventoryEditForm item={edit.item} />
       : null}
+      <h2>Download as csv</h2>
+      {list 
+      ? <CSVLink data={list}>Download me</CSVLink>
+      : null
+      }
     </>
   )
 }

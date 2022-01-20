@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addItem } from './utils/inventoryAPI';
+import { addItem } from '../utils/inventoryAPI';
 
 export default function InventoryForm() {
   const [input, setInput] = useState({

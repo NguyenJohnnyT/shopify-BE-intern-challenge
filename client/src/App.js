@@ -1,6 +1,7 @@
-import React from 'react';
-import InventoryList from './InventoryList';
-import InventoryForm from './InventoryForm';
+import React, {useState, useEffect} from 'react';
+import InventoryList from './components/InventoryList';
+import InventoryForm from './components/InventoryForm';
+import { getItems } from './utils/inventoryAPI';
 
 function App() {
   return (
