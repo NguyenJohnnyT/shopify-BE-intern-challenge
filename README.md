@@ -6,7 +6,7 @@
 
   Build an inventory tracking web application for a logistics company. 
   
-  <b>Required</b>: Basic CRUD functionality\  
+  <b>Required</b>: Basic CRUD functionality  
   <b>Feature used</b>: Push a button to export product data to a CSV
 
 ## Sample Application Image
